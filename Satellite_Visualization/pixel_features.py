@@ -63,21 +63,7 @@ class PixelFeaturesBuilder:
             num_orientations = settings.GAUSS_NUM_ORIENTATIONS
         self.num_orientations = num_orientations
 
-        # entropy features
-        # TODO: compute entropy features with `neighborhoods` kwarg
-        # TODO: scales NOT used when `neighborhoods` kwarg is provided
-        # if neighborhoods is None:
-        #     if min_neighborhood_range is None:
-        #         min_neighborhood_range = \
-        #             settings.ENTROPY_DEFAULT_MIN_NEIGHBORHOOD_RANGE
-        #     if num_neighborhoods is None:
-        #         num_neighborhoods = \
-        #             settings.ENTROPY_DEFAULT_NUM_NEIGHBORHOODS
-        #     scales = np.geomspace(1, 2**(num_neighborhoods - 1),
-        #                           num_neighborhoods).astype(int)
-        #     neighborhood = morphology.square(2 * min_neighborhood_range + 1)
-        # else:
-        #     num_neighborhoods = len(neighborhoods)
+
         if neighborhood is None:
             if min_neighborhood_range is None:
                 min_neighborhood_range = settings.ENTROPY_MIN_NEIGHBORHOOD_RANGE
